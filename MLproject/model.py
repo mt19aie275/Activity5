@@ -306,7 +306,7 @@ class ColorTransWithFlip:
 
     def lab2rgb(self,img):
         toflipImg = ImageCms.applyTransform(img, self.lab2rgb_trans)
-        return toflipImg
+        return transforms.Grayscale(toflipImg)
 
 pip install scikit-image
 from skimage.io import imread
